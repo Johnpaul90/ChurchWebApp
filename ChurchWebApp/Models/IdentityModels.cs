@@ -29,5 +29,21 @@ namespace ChurchWebApp.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ChurchWebApp.Models.Ministry> Ministries { get; set; }
+
+        public System.Data.Entity.DbSet<ChurchWebApp.Models.MinistrySize> MinistrySizes { get; set; }
+
+        public System.Data.Entity.DbSet<ChurchWebApp.Models.Country> Countries { get; set; }
+
+        public System.Data.Entity.DbSet<ChurchWebApp.Models.Denomination> Denominations { get; set; }
+
+        public System.Data.Entity.DbSet<ChurchWebApp.Models.MinistryCategory> MinistryCategories { get; set; }
+
+        public System.Data.Entity.DbSet<ChurchWebApp.Models.ChurchClaims> ChurchClaims { get; set; }
+
+        public System.Data.Entity.DbSet<ChurchWebApp.Models.Pastor> Pastors { get; set; }
+
+        public System.Data.Entity.DbSet<ChurchWebApp.Models.Vibe> Vibes { get; set; }
     }
 }

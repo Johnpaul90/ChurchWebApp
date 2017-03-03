@@ -1,0 +1,154 @@
+﻿@model ChurchWebApp.Models.Pastor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pastor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ministry.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ministry.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qualification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qualification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Biography)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Biography)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PictureBlob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureBlob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PictureWithWife)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureWithWife)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PictureWithWifeBlob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureWithWifeBlob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Facebook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Facebook)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Twitter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Twitter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Youtube)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Youtube)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instagram)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instagram)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoIntroduction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VideoIntroduction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsMainPastor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsMainPastor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.iD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

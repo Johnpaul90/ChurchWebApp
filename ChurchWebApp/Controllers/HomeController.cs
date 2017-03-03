@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChurchWebApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,12 @@ namespace ChurchWebApp.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Index()
         {
-            return View();
+            var churches = db.Ministries.OrderByDescending(c => c.DateEntered).Take(10).ToList();
+            return View(churches);
         }
 
         public ActionResult About()

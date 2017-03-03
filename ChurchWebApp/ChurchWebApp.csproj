@@ -168,14 +168,47 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChurchClaimsController.cs" />
+    <Compile Include="Controllers\CountriesController.cs" />
+    <Compile Include="Controllers\DenominationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MinistriesController.cs" />
+    <Compile Include="Controllers\MinistryCategoriesController.cs" />
+    <Compile Include="Controllers\MinistrySizesController.cs" />
+    <Compile Include="Controllers\PastorsController.cs" />
+    <Compile Include="Controllers\VibesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703011708493_InitialCreate.cs" />
+    <Compile Include="Migrations\201703011708493_InitialCreate.Designer.cs">
+      <DependentUpon>201703011708493_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703012252324_ToFrom.cs" />
+    <Compile Include="Migrations\201703012252324_ToFrom.Designer.cs">
+      <DependentUpon>201703012252324_ToFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703020829143_MinistryId.cs" />
+    <Compile Include="Migrations\201703020829143_MinistryId.Designer.cs">
+      <DependentUpon>201703020829143_MinistryId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703021133596_ApplicationUser.cs" />
+    <Compile Include="Migrations\201703021133596_ApplicationUser.Designer.cs">
+      <DependentUpon>201703021133596_ApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ChurchClaims.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Denomination.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Ministry.cs" />
+    <Compile Include="Models\MinistryCategory.cs" />
+    <Compile Include="Models\MinistrySize.cs" />
+    <Compile Include="Models\Pastor.cs" />
+    <Compile Include="Models\Vibe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -234,6 +267,46 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Ministries\Create.cshtml" />
+    <Content Include="Views\Ministries\Delete.cshtml" />
+    <Content Include="Views\Ministries\Details.cshtml" />
+    <Content Include="Views\Ministries\Edit.cshtml" />
+    <Content Include="Views\Ministries\Index.cshtml" />
+    <Content Include="Views\Countries\Create.cshtml" />
+    <Content Include="Views\Countries\Delete.cshtml" />
+    <Content Include="Views\Countries\Details.cshtml" />
+    <Content Include="Views\Countries\Edit.cshtml" />
+    <Content Include="Views\Countries\Index.cshtml" />
+    <Content Include="Views\Denominations\Create.cshtml" />
+    <Content Include="Views\Denominations\Delete.cshtml" />
+    <Content Include="Views\Denominations\Details.cshtml" />
+    <Content Include="Views\Denominations\Edit.cshtml" />
+    <Content Include="Views\Denominations\Index.cshtml" />
+    <Content Include="Views\MinistryCategories\Create.cshtml" />
+    <Content Include="Views\MinistryCategories\Delete.cshtml" />
+    <Content Include="Views\MinistryCategories\Details.cshtml" />
+    <Content Include="Views\MinistryCategories\Edit.cshtml" />
+    <Content Include="Views\MinistryCategories\Index.cshtml" />
+    <Content Include="Views\Vibes\Create.cshtml" />
+    <Content Include="Views\Vibes\Delete.cshtml" />
+    <Content Include="Views\Vibes\Details.cshtml" />
+    <Content Include="Views\Vibes\Edit.cshtml" />
+    <Content Include="Views\Vibes\Index.cshtml" />
+    <Content Include="Views\Pastors\Create.cshtml" />
+    <Content Include="Views\Pastors\Delete.cshtml" />
+    <Content Include="Views\Pastors\Details.cshtml" />
+    <Content Include="Views\Pastors\Edit.cshtml" />
+    <Content Include="Views\Pastors\Index.cshtml" />
+    <Content Include="Views\MinistrySizes\Create.cshtml" />
+    <Content Include="Views\MinistrySizes\Delete.cshtml" />
+    <Content Include="Views\MinistrySizes\Details.cshtml" />
+    <Content Include="Views\MinistrySizes\Edit.cshtml" />
+    <Content Include="Views\MinistrySizes\Index.cshtml" />
+    <Content Include="Views\ChurchClaims\Create.cshtml" />
+    <Content Include="Views\ChurchClaims\Delete.cshtml" />
+    <Content Include="Views\ChurchClaims\Details.cshtml" />
+    <Content Include="Views\ChurchClaims\Edit.cshtml" />
+    <Content Include="Views\ChurchClaims\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +318,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703011708493_InitialCreate.resx">
+      <DependentUpon>201703011708493_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703012252324_ToFrom.resx">
+      <DependentUpon>201703012252324_ToFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703020829143_MinistryId.resx">
+      <DependentUpon>201703020829143_MinistryId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703021133596_ApplicationUser.resx">
+      <DependentUpon>201703021133596_ApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
